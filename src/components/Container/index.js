@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import API from '../../utils/API';
 import SearchHeader from '../SearchHeader';
 import TableHeader from '../TableHeader';
-import TableResults from '../Results';
+import Results from '../Results';
 import './style.css'
 
 class Container extends Component {
@@ -33,8 +33,8 @@ class Container extends Component {
         event.preventDefault();
         this.setState({ search: event.target.value.toLowerCase() }, (set) => {
             let criteria = this.state.search
-            let searchResults = this.state.employees.filter(employee => employee.firstName.toLowerCase().startsWith(criteria) || employee.lastName.toLowerCase().startsWith(criteria))
-            return this.setState({ filtered: searchResults })
+            let Results = this.state.employees.filter(employee => employee.firstName.toLowerCase().startsWith(criteria) || employee.lastName.toLowerCase().startsWith(criteria))
+            return this.setState({ filtered: Results })
         });
     };
 

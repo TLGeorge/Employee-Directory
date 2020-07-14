@@ -1,7 +1,4 @@
-// going to put API axios get function here
 import axios from "axios";
-
-// consider supplying some params to this function to get it to return data in different ways. maybe?
 
 export default {
     getEmployees: function () {
